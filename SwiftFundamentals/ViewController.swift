@@ -54,6 +54,38 @@ class ViewController: UIViewController {
         let cow = "🐮";
         print("size of \(cow) is \(cow.count)");
         
+        
+        /* Functions */
+        
+        /* it is possible to define labels
+         * for the function parameter
+         * in the example below
+         * "to" and "and" are the parameters' label
+         * while "person" and "anotherPerson" are the parameters' name
+         * Inside the function's body you have to refer parameters with their names
+         */
+        
+        func sayHello(to person: String, and anotherPerson: String){
+            print("Hello \(person) and \(anotherPerson)");
+        }
+        
+        sayHello(to: "Trev", and: "Tania");
+        
+        /* it is possible to omit the argument label
+         * with the discard character "_"
+         * to specify return type after parameter definition
+         * It is possible to assign default values to paramters
+         * the following syntax is required
+         * -> returnType
+         * with Swift 5.1 if the codeblock has only one line it is possible to omit "return" keyword
+         */
+        
+        func add(_ firstNumber: Int, to secondNumber: Int = 0) -> Int {
+            firstNumber + secondNumber;
+        }
+        
+        print(add(14, to: 6));
+        print(add(13));
     }
 
 
