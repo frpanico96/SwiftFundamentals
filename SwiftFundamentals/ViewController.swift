@@ -13,7 +13,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        //==========
+        // STRINGS
+        //==========
         
         /* String interpolation */
         let name = "Sophie";
@@ -54,8 +56,9 @@ class ViewController: UIViewController {
         let cow = "🐮";
         print("size of \(cow) is \(cow.count)");
         
-        
-        /* Functions */
+        //==========
+        // FUNCTIONS
+        //==========
         
         /* it is possible to define labels
          * for the function parameter
@@ -88,7 +91,11 @@ class ViewController: UIViewController {
         print(add(13));
         
         
-        /* Struct */
+        //==========
+        //STRUCTURES
+        //==========
+        
+        
         struct Person{
             var name: String;
             
@@ -277,6 +284,127 @@ class ViewController: UIViewController {
         
         print(oneSize.width);
         print(anotherSize.width);
+        
+        
+        //==========
+        // CLASSES
+        //==========
+        
+        /*
+         * Classes are very similar to structures
+        */
+        
+        class PersonClass{
+            let name: String
+            var age: Int
+            
+            init(name: String, age: Int){
+                self.name = name;
+                self.age = age;
+            }
+            
+            func sayHello(){
+                print("Hello there!")
+            }
+        }
+        
+        print("Classes:")
+        let personClass = PersonClass(name: "Jenny", age: 29);
+        personClass.sayHello();
+        
+        /*
+         * The main difference is that classes have inheritance
+         * They can have parent and child classes
+         * Parent class is called superclass
+         * Child class is calles subclass
+         * A class that does not inherit from a superclass is known as base class
+         */
+        
+        class Vehicle{
+            var currentSpeed = 0.0;
+            
+            var description: String {
+                "travelling at \(currentSpeed) miles per hour";
+            }
+            
+            func makeNoise(){}
+            
+        }
+        
+        /*
+         * Veichle is the base class
+         * we now create a subclass that inherits from Veichle class.
+         * The subclass Bycicle has all the properties and methods of Veichle
+         * In addition it has its own properties i.e. hasBasket.
+         */
+        
+        class Bicycle: Vehicle{
+            var hasBasket = false;
+        }
+        
+        let bycicle = Bicycle();
+        print(bycicle.description);
+        
+        /*
+         * It is possible to create a subclass that inherits from subclass
+         */
+        
+        class Tandem: Bicycle{
+            var currentNumberOfPassengers = 0;
+        }
+        
+        /*
+         * Subclasses can override methods and computed variables from thew superclass
+         */
+        
+        class Train: Vehicle{
+            
+            var gear = 1;
+            
+            override var description: String{
+                super.description + " in gear \(gear)";
+            }
+            
+            override func makeNoise() {
+                print("Choo Choo");
+            }
+        }
+        
+        let train = Train();
+        train.makeNoise();
+        print(train.description);
+        
+        /* It is possible to ovveride initializer in a subclass*/
+        class Student: PersonClass{
+            var favoriteSubject: String
+            
+            init(name: String, age:Int, favoriteSubject: String){
+                self.favoriteSubject = favoriteSubject;
+                super.init(name: name, age: age);
+            }
+        }
+        
+        /*
+         * A special feature of classes is their ability to reference values assigned to a constant or variable.
+         * Constants or variables do not contain the values itself, they point to the value in memory
+         * When you assign a class to multiple variables, each variable will reference, or point to,
+         * the same address in memory. So if you update one of the variables, both variables will be updated
+         */
+        
+        var jay = PersonClass(name: "Jay", age: 24);
+        var myFriend = jay;
+        
+        jay.age += 1;
+        
+        print(jay.age);
+        print(myFriend.age);
+        
+        /*
+         * Unlike structures, Swift does not create a memberwise initializer for classes.
+         * A basic rule is to start new type as structures until you need one of the features that classes provide
+         * Otherwise, frameworks like Foundation or UIKit works with classes
+         * It is common practice to create child classes of framework base class e.g. UIView.
+         */
         
     }
 
