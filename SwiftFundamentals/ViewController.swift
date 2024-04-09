@@ -406,8 +406,114 @@ class ViewController: UIViewController {
          * It is common practice to create child classes of framework base class e.g. UIView.
          */
         
+        //==========
+        // COLLECTIONS
+        //==========
+
+        /* Swift defines two types of collection: arrays and dictionaries */
+        
+        /* Arrays */
+        
+        /* var names: [String] = ["Andre", "Aileen", "Anthony"]; */
+        var numbers: [Int8] = [1, -3, 50, 72, -95, 115];
+        
+        if numbers.contains(5){
+            print("There is 5");
+        }
+        
+        /*
+         * defining arrays
+         
+         var myArray: [Int] = [];
+         var myArray2: Array<Int> = [];
+         var myArray3 = [Int]();
+        */
+        
+        var myArray = [Int](repeating: 0, count: 100);
+        let count = myArray.count;
+        if myArray.isEmpty{
+            print("Empty array");
+        }
+        
+        var names = ["Amy"];
+        names.append("Joe");
+        names += ["Anthony", "James"];
+        print(names);
+        names.insert("Bob", at: 0);
+        names.remove(at: 2);
+        names.removeLast();
+        print(names);
+        names.removeAll();
+        print(names);
+        
+        var myArray2 = [Int](repeating: 1, count: 100);
+        var myArray3 = myArray + myArray2;
+        
+        var myArray4 = [1,2,3];
+        var myArray5 = [4,5,6];
+        let containerArray = [myArray4, myArray5];
+        print(containerArray[0])
+        print(containerArray[0][0])
+        
+        
+        /* Dictionaries */
+        
+        var scores = ["Richard": 500, "Luke": 400, "Cheryl": 800];
+        
+        /*
+         defining dictionaries
+         
+         myDictionary = [String: Int]();
+         myDictionary = Dictionary<String, Int>();
+         myDictionary: [String, Int] = [:]
+         */
+        
+        scores["Oli"] = 200;
+        scores.updateValue(300, forKey: "Mike");
+        
+        print(scores);
+        
+        let oldValue = scores.updateValue(100, forKey: "Richard");
+        print(oldValue!);
+        
+        /* Swift will execute the print inside the if statement
+         * if scores.updateValue returns something (i.e. the old value)
+         */
+        
+        if let oldVal = scores.updateValue(100, forKey: "Richard"){
+            print("Richard's old values was \(oldVal)");
+        }
+        
+        /* Remove element from a dictionary */
+        
+        scores["Richard"] = nil;
+        
+        /* Swift will execute the print inside the if statement
+         * if scores.removeValue returns something (i.e. the old value)
+         */
+        
+        if let removedVal = scores.removeValue(forKey: "Luke"){
+            print("Luke's score was \(removedVal) before he stopped playing");
+        }
+        
+        /* Extract keys and values from dictionary as an array*/
+        let players = Array(scores.keys);
+        let points = Array(scores.values);
+        
+        /* Swift will print the statement if the dictionary returns a value */
+        
+        if let lukesScore = scores["Luke"]{
+            print(lukesScore);
+        }
+        if let oilScore = scores["Oli"]{
+            print(oilScore);
+        }
+        
     }
 
+    
+    
 
+    
 }
 
