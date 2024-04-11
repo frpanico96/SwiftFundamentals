@@ -128,7 +128,7 @@ class ViewController: UIViewController {
         }
         
         let firstCar = Car(type: "truck", color: "red", year: 2010, topSpeed: 120);
-        let secondCar = Car(type: "sedan", color: "blue", year: 2013, topSpeed: 125);
+        _ = Car(type: "sedan", color: "blue", year: 2013, topSpeed: 125);
         
         firstCar.startEngine();
         firstCar.drive();
@@ -233,7 +233,7 @@ class ViewController: UIViewController {
             }
         }
         
-        var computedTemperature = ComputedTemperature(celsius: 0.0);
+        let computedTemperature = ComputedTemperature(celsius: 0.0);
         print(computedTemperature.fahrenheit);
         print(computedTemperature.kelvin);
         
@@ -278,7 +278,7 @@ class ViewController: UIViewController {
          */
         
         var oneSize = Size(width: 250, height: 1000);
-        var anotherSize = oneSize;
+        let anotherSize = oneSize;
         
         oneSize.width = 500;
         
@@ -391,8 +391,8 @@ class ViewController: UIViewController {
          * the same address in memory. So if you update one of the variables, both variables will be updated
          */
         
-        var jay = PersonClass(name: "Jay", age: 24);
-        var myFriend = jay;
+        let jay = PersonClass(name: "Jay", age: 24);
+        let myFriend = jay;
         
         jay.age += 1;
         
@@ -415,7 +415,7 @@ class ViewController: UIViewController {
         /* Arrays */
         
         /* var names: [String] = ["Andre", "Aileen", "Anthony"]; */
-        var numbers: [Int8] = [1, -3, 50, 72, -95, 115];
+        let numbers: [Int8] = [1, -3, 50, 72, -95, 115];
         
         if numbers.contains(5){
             print("There is 5");
@@ -429,8 +429,8 @@ class ViewController: UIViewController {
          var myArray3 = [Int]();
         */
         
-        var myArray = [Int](repeating: 0, count: 100);
-        let count = myArray.count;
+        let myArray = [Int](repeating: 0, count: 100);
+        _ = myArray.count;
         if myArray.isEmpty{
             print("Empty array");
         }
@@ -446,11 +446,11 @@ class ViewController: UIViewController {
         names.removeAll();
         print(names);
         
-        var myArray2 = [Int](repeating: 1, count: 100);
-        var myArray3 = myArray + myArray2;
+        let myArray2 = [Int](repeating: 1, count: 100);
+        _ = myArray + myArray2;
         
-        var myArray4 = [1,2,3];
-        var myArray5 = [4,5,6];
+        let myArray4 = [1,2,3];
+        let myArray5 = [4,5,6];
         let containerArray = [myArray4, myArray5];
         print(containerArray[0])
         print(containerArray[0][0])

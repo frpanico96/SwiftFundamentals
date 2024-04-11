@@ -16,6 +16,8 @@
 		7337DEF72BACE6500028B3F8 /* SwiftFundamentalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7337DEF62BACE6500028B3F8 /* SwiftFundamentalsTests.swift */; };
 		7337DF012BACE6500028B3F8 /* SwiftFundamentalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7337DF002BACE6500028B3F8 /* SwiftFundamentalsUITests.swift */; };
 		7337DF032BACE6500028B3F8 /* SwiftFundamentalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7337DF022BACE6500028B3F8 /* SwiftFundamentalsUITestsLaunchTests.swift */; };
+		73C756012BC87C2200C1A42F /* HelloAppInfo in Resources */ = {isa = PBXBuildFile; fileRef = 73C756002BC87C2200C1A42F /* HelloAppInfo */; };
+		73C756032BC87FA200C1A42F /* HobbyTutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C756022BC87FA100C1A42F /* HobbyTutorial.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7337DEFC2BACE6500028B3F8 /* SwiftFundamentalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFundamentalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7337DF002BACE6500028B3F8 /* SwiftFundamentalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFundamentalsUITests.swift; sourceTree = "<group>"; };
 		7337DF022BACE6500028B3F8 /* SwiftFundamentalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFundamentalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		73C756002BC87C2200C1A42F /* HelloAppInfo */ = {isa = PBXFileReference; lastKnownFileType = text; path = HelloAppInfo; sourceTree = "<group>"; };
+		73C756022BC87FA100C1A42F /* HobbyTutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HobbyTutorial.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				7337DEE82BACE64F0028B3F8 /* Assets.xcassets */,
 				7337DEEA2BACE64F0028B3F8 /* LaunchScreen.storyboard */,
 				7337DEED2BACE64F0028B3F8 /* Info.plist */,
+				73C756002BC87C2200C1A42F /* HelloAppInfo */,
+				73C756022BC87FA100C1A42F /* HobbyTutorial.storyboard */,
 			);
 			path = SwiftFundamentals;
 			sourceTree = "<group>";
@@ -232,8 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7337DEEC2BACE64F0028B3F8 /* LaunchScreen.storyboard in Resources */,
+				73C756012BC87C2200C1A42F /* HelloAppInfo in Resources */,
 				7337DEE92BACE64F0028B3F8 /* Assets.xcassets in Resources */,
 				7337DEE72BACE64B0028B3F8 /* Main.storyboard in Resources */,
+				73C756032BC87FA200C1A42F /* HobbyTutorial.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
