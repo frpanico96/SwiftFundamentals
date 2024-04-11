@@ -500,6 +500,9 @@ class ViewController: UIViewController {
         let players = Array(scores.keys);
         let points = Array(scores.values);
         
+        print(players);
+        print(points);
+        
         /* Swift will print the statement if the dictionary returns a value */
         
         if let lukesScore = scores["Luke"]{
@@ -508,6 +511,77 @@ class ViewController: UIViewController {
         if let oilScore = scores["Oli"]{
             print(oilScore);
         }
+        
+        //==========
+        // LOOPS
+        //==========
+        
+        /* for-in loop
+         * the "..." is called close range operator
+         * defines a range of values from x up to y
+         * there is an half-open range operator "..<"
+         * that runs from x up to y, without including y
+         */
+        for index in 1...5{
+            print("This is number \(index)");
+        }
+        
+        /* It is possible to loop with a discard operator*/
+        for _ in 1...3{
+            print("Hello!");
+        }
+        
+        /* It is possible to loop through arrays*/
+        let namesLoop = ["Aga", "Antonio", "Rody"];
+        for name in namesLoop{
+            print("Hello \(name)");
+        }
+        for index in 0..<namesLoop.count{
+            print("\(index): \(namesLoop[index])");
+        }
+        
+        /* It is possible to loop through strings*/
+        for letter in "ABCD"{
+            print("The letter is \(letter)");
+        }
+        /* If index is needed with a string/array loop
+         * it is possible to use the .enumerated() method
+         */
+        for (index, letter) in "ABCD".enumerated(){
+            print("\(index): \(letter)");
+        }
+        
+        /* It is possible to loop through dictionaries*/
+        let vehicles = ["unicycle": 1, "bicycle": 2, "trycicle": 3, "quad bike": 4];
+        for (vehicleName, wheelCount) in vehicles{
+            print("A \(vehicleName) has \(wheelCount) wheels");
+        }
+        
+        
+        /* while loop */
+        var numberOfLives = 3;
+        var stillAlive = true;
+        while stillAlive{
+            numberOfLives -= 1;
+            if numberOfLives == 0{
+                stillAlive = false;
+            }
+        }
+        
+        /* repeat-while loop (do-while) */
+        var steps = 0;
+        let wall = 2;
+        
+        repeat{
+            print("Step");
+            
+            steps += 1;
+            
+            if steps == wall{
+                print("You've hit a wall!");
+                break;
+            }
+        } while steps < 10
         
     }
 
