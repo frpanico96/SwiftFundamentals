@@ -16,6 +16,7 @@
 		7337DEF72BACE6500028B3F8 /* SwiftFundamentalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7337DEF62BACE6500028B3F8 /* SwiftFundamentalsTests.swift */; };
 		7337DF012BACE6500028B3F8 /* SwiftFundamentalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7337DF002BACE6500028B3F8 /* SwiftFundamentalsUITests.swift */; };
 		7337DF032BACE6500028B3F8 /* SwiftFundamentalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7337DF022BACE6500028B3F8 /* SwiftFundamentalsUITestsLaunchTests.swift */; };
+		736D3CB12BD864FA00BA38A6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D3CB02BD864FA00BA38A6 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7337DEFC2BACE6500028B3F8 /* SwiftFundamentalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFundamentalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7337DF002BACE6500028B3F8 /* SwiftFundamentalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFundamentalsUITests.swift; sourceTree = "<group>"; };
 		7337DF022BACE6500028B3F8 /* SwiftFundamentalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFundamentalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		736D3CB02BD864FA00BA38A6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7337DEE82BACE64F0028B3F8 /* Assets.xcassets */,
 				7337DEEA2BACE64F0028B3F8 /* LaunchScreen.storyboard */,
 				7337DEED2BACE64F0028B3F8 /* Info.plist */,
+				736D3CB02BD864FA00BA38A6 /* Game.swift */,
 			);
 			path = SwiftFundamentals;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				7337DEE42BACE64B0028B3F8 /* ViewController.swift in Sources */,
 				7337DEE02BACE64B0028B3F8 /* AppDelegate.swift in Sources */,
 				7337DEE22BACE64B0028B3F8 /* SceneDelegate.swift in Sources */,
+				736D3CB12BD864FA00BA38A6 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,9 +461,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Francesco.SwiftFundamentals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -485,9 +492,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Francesco.SwiftFundamentals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
